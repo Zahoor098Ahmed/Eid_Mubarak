@@ -20,11 +20,11 @@
         body {
             background-image: url(https://images.pexels.com/photos/2989625/pexels-photo-2989625.jpeg?cs=srgb&dl=pexels-chattrapalsingh-2989625.jpg&fm=jpg);
             background-repeat: no-repeat;
-            background-size: cover; /* Image puri screen cover karegi */
-            background-position: center; /* Image center mein rahegi */
-            width: 100vw; /* 100% viewport width */
-            height: 100vh; /* 100% viewport height */
-            overflow: hidden; /* Overflow hidden */
+            background-size: cover;
+            background-position: center;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
         }
 
         .title {
@@ -123,6 +123,45 @@
 
         .animate__flip {
             animation-duration: 2s;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 3rem; /* Choti screens ke liye font size */
+            }
+            .wish {
+                font-size: 2rem; /* Choti screens ke liye font size */
+            }
+            .name {
+                font-size: 3rem; /* Choti screens ke liye font size */
+            }
+            .signature {
+                font-size: 2rem; /* Choti screens ke liye font size */
+            }
+            .my_btn {
+                font-size: 1.2rem; /* Choti screens ke liye button size */
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .title {
+                font-size: 2.5rem; /* Aur choti screens ke liye font size */
+            }
+            .wish {
+                font-size: 1.5rem; /* Aur choti screens ke liye font size */
+            }
+            .name {
+                font-size: 2.5rem; /* Aur choti screens ke liye font size */
+            }
+            .signature {
+                font-size: 1.5rem; /* Aur choti screens ke liye font size */
+            }
+            .my_btn {
+                font-size: 1rem; /* Aur choti screens ke liye button size */
+                padding: 8px 16px;
+            }
         }
     </style>
   </head>
