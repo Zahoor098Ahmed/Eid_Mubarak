@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+   
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kaushan+Script&family=Sacramento&family=Shadows+Into+Light&family=Pacifico&display=swap" rel="stylesheet">
+
+    <title>Eid Mubarak!</title>
+
+    <style>
+        body {
+            background-image: url(https://images.pexels.com/photos/2989625/pexels-photo-2989625.jpeg?cs=srgb&dl=pexels-chattrapalsingh-2989625.jpg&fm=jpg);
+            background-repeat: no-repeat;
+            background-size: cover; /* Image puri screen cover karegi */
+            background-position: center; /* Image center mein rahegi */
+            width: 100vw; /* 100% viewport width */
+            height: 100vh; /* 100% viewport height */
+            overflow: hidden; /* Overflow hidden */
+        }
+
+        .title {
+            font-family: 'Pacifico', cursive;
+            font-size: 5rem;
+            color: #fff;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .wish {
+            font-family: 'Shadows Into Light', cursive;
+            color: #ffdd59;
+            text-align: center;
+            font-size: 2.5rem;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #ffdd59, 0 0 20px #ffdd59; }
+            100% { text-shadow: 0 0 20px #ffdd59, 0 0 40px #ffdd59; }
+        }
+
+        .name {
+            font-family: 'Sacramento', cursive;
+            color: #ff6b6b;
+            font-size: 4rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .signature {
+            font-family: 'Great Vibes', cursive;
+            color: #fff;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .my_btn {
+            background: linear-gradient(45deg, #ff6b6b, #ffdd59);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .my_btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .modal-title {
+            color: #fff;
+            font-family: 'Pacifico', cursive;
+            font-size: 2rem;
+        }
+
+        .my_style {
+            box-shadow: 0px 0px 30px rgba(255, 221, 89, 0.5);
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .big {
+            font-size: 4rem;
+        }
+
+        .animate__flip {
+            animation-duration: 2s;
+        }
+    </style>
+  </head>
+  <body class="animate__animated animate__flip">
+    <h1 class="title text-center mt-4 animate__animated animate__backInDown">Assalamu Alaikum</h1>
+    <div class="d-flex justify-content-center mt-5">
+        <a class="my_btn big btn wish animate__animated animate__pulse" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Click To Get Wish</a>
+    </div>
+
+    <div class="container mt-5">
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered animate__animated animate__backInUp">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalToggleLabel">Please Enter Your Name 😊</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" class="form-control" id="getName" placeholder="Enter Your Name">
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn my_btn" onclick="writeName()" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Get Wish</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row mx-3 d-flex justify-content-center">
+                            <div class="my_style m-auto col p-3 animate__animated animate__zoomIn">
+                                <h1 class="text-center m-1 fs-5 signature">Dear <br> <span id="name" class="name">Alexa</span></h1>
+                                <p class="text-center my-1 wish fs-1">EID MUBARAK</p>
+                                <p class="wish fs-3">Eid Mubarak to you and your family! Sending all of my love and good wishes to you on this EID. Happy <br> <span class="signature">EID MUBARAK,</span><br> dear brother / sister</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn my_btn" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to First</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function writeName() {
+            var readName = document.getElementById('getName').value;
+            document.getElementById('name').innerHTML = readName;
+        }
+    </script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
